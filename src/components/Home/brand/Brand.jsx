@@ -4,6 +4,8 @@ import lamar from '../../../images/brand/test/brand21.jpg';
 import mortaha from '../../../images/brand/test/img2.jpg';
 import neo from '../../../images/brand/test/img3.jpg';
 import shera from '../../../images/brand/test/img4.jpg';
+import { Link } from 'react-router-dom';
+
 function Brand() {
   return (
     <>
@@ -32,28 +34,72 @@ function Brand() {
         </div>
         <div className='lamar-container'>
           <div className='item1'>
-            <div className='image'>
-              <img src={lamar} alt='lamar' />
-            </div>
-            <h3>lamar</h3>
+            <Link
+              to='/Abaya'
+              onClick={() => {
+                window.scrollTo({
+                  left: 0,
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}
+            >
+              <div className='image'>
+                <img src={lamar} alt='lamar' />
+              </div>
+              <h3>lamar</h3>
+            </Link>
           </div>
           <div className='item2'>
-            <div className='image'>
-              <img src={mortaha} alt='mortaha' />
-            </div>
-            <h3>shera</h3>
+            <Link
+              to='/Abaya'
+              onClick={() => {
+                window.scrollTo({
+                  left: 0,
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}
+            >
+              <div className='image'>
+                <img src={mortaha} alt='mortaha' />
+              </div>
+              <h3>shera</h3>
+            </Link>
           </div>
           <div className='item3'>
-            <div className='image'>
-              <img src={neo} alt='neo' />
-            </div>
-            <h3>neo</h3>
+            <Link
+              to='/Abaya'
+              onClick={() => {
+                window.scrollTo({
+                  left: 0,
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}
+            >
+              <div className='image'>
+                <img src={neo} alt='neo' />
+              </div>
+              <h3>neo</h3>
+            </Link>
           </div>
           <div className='item4'>
-            <div className='image'>
-              <img src={shera} alt='shera' />
-            </div>
-            <h3>mortaha</h3>
+            <Link
+              to='/Abaya'
+              onClick={() => {
+                window.scrollTo({
+                  left: 0,
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}
+            >
+              <div className='image'>
+                <img src={shera} alt='shera' />
+              </div>
+              <h3>mortaha</h3>
+            </Link>
           </div>
         </div>
       </section>
