@@ -77,11 +77,11 @@
     color: var(--main-color-alt);
 } */
 .profile-lamar .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: var(--main-color-alt);
+    color: var(--main-color-alt)!important;
 
 }
 .profile-lamar span.MuiTabs-indicator.css-1aquho2-MuiTabs-indicator{
-    background-color:var(--main-color-alt);
+    background-color:var(--main-color-alt) !important;
 }
 .profile-lamar .TabPanel-profile{
     padding: 0;

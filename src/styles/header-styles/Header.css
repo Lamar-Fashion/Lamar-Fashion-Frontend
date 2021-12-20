@@ -104,17 +104,26 @@
   /* transition-delay: width 0.25s; */
   padding-top: 75px;
 }
+.header .close-vertical{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(238, 10, 10, 0.86);
+  left: 0;
+  top: 0;
+}
 @media (min-width: 769px) {
   .header .vertical-nav-container {
+    display: none;
+  }
+  .header .close-vertical{
     display: none;
   }
 }
 @keyframes width {
   0% {
     width: 0;
-  }
-  50% {
-    width: 25%;
   }
   100% {
     width: 50%;
