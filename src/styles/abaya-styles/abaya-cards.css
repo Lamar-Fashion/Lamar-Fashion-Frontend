@@ -143,20 +143,8 @@
 .abaya-cards .pagaination nav ul > li > button {
   transition: box-shadow 0.3s;
   box-shadow: 0 2px 12px rgb(0, 0, 0, 0.4);
-  color: var(--main-color-alt2);
-  background-color: var(--main-color-alt);
 }
 
-.abaya-cards .pagaination nav ul > li > button:hover {
-  background-color: var(--main-color-alt2);
-  box-shadow: 0 2px 12px rgb(0, 0, 0, 0.5);
-  color: var(--main-color-alt);
-}
-
-.abaya-cards .pagaination nav ul > li > button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.MuiPaginationItem-text.MuiPaginationItem-circular.MuiPaginationItem-textPrimary.Mui-selected.MuiPaginationItem-page.css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
-  color: var(--main-color-alt) !important;
-  background-color: var(--main-color-alt2) !important;
-}
 .abaya-cards .box {
   height: 390px;
   width: 100%;
@@ -331,6 +319,7 @@
 }
 .abaya-cards .box .info .price .size {
   color: var(--text-color);
+letter-spacing: 10px;
 }
 .abaya-cards .box .info .add-cart {
   width: 150px;
@@ -341,6 +330,9 @@
   color: black;
   border: 1px black solid;
   transition: box-shadow 0.5s, transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .abaya-cards .box:hover .info .add-cart {
@@ -348,6 +340,7 @@
   border: 1px var(--main-color-alt2) solid;
   color: var(--main-color-alt2);
   font-weight: 500;
+
 }
 .abaya-cards .box .info .add-cart:hover {
   transform: translateY(-5px);

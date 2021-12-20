@@ -71,6 +71,7 @@ ul {
   border: 1px solid var(--main-color);
   z-index: 2;
   cursor: pointer;
+  animation: zz 1s linear infinite;
 }
 
 .go-up i {
@@ -83,6 +84,15 @@ ul {
 }
 .go-up:hover i {
   color: var(--main-color-alt);
+}
+@keyframes zz{
+  0% ,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+
 }
 /*  start main title  */
 

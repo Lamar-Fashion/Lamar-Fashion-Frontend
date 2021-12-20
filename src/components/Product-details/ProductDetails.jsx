@@ -1,9 +1,9 @@
 import {React, useState} from 'react'
 import "../../styles/product-details/product-details.css"
 import { Link } from "react-router-dom";
-import obj from "../../product-d.json"
 import Flicking from "@egjs/react-flicking";
 function ProductDetails() {
+    let obj=JSON.parse(window.localStorage.getItem("product"))
     let images=obj.images
     let firstImg=obj.images[0]
     const [state, setstate] = useState(firstImg)
@@ -12,6 +12,13 @@ function ProductDetails() {
     let size=obj.size
     let color=obj.color
     let descrp=obj.discrpition
+
+    const addEntry=async(obj)=>{
+        let FavArray = JSON.parse(window.localStorage.getItem("cart"));
+        if(FavArray==null) FavArray=[];
+        await FavArray.push(obj);
+      await  window.localStorage.setItem("cart",JSON.stringify(FavArray))
+      }
     return (
         <>
             <section className="product-d" >
@@ -85,7 +92,9 @@ function ProductDetails() {
                        
                     </div>
                     <div className="add-to-cart">
-                        <button>add to cart</button>
+                        <button onClick={()=>{
+                            addEntry(obj)
+                        }}>add to cart</button>
                     </div>
                     <div className="add-fav">
                     <button>💖</button>

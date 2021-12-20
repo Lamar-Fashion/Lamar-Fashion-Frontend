@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { React, useState, useEffect } from "react";
 import "../../styles/header-styles/Header.css";
@@ -11,7 +13,17 @@ function Header() {
   const [dropDown, setDropDown] = useState(false);
   const [dropDownA, setDropDownA] = useState(false);
   const [y, setY] = useState(0);
-
+  const [favNam,setFavNam]=useState(0)
+  const [favArray,setFavArray]=useState([])
+  const [cartNam,setCartNam]=useState(0)
+  const [cartArray,setCartArray]=useState([])
+  useEffect(() => {
+    setFavArray(JSON.parse(window.localStorage.getItem("fav")))
+    setCartArray(JSON.parse(window.localStorage.getItem("cart")))
+    favArray&& setFavNam(favArray.length)
+    cartArray&& setCartNam(cartArray.length)
+  },[favArray,favNam,cartNam,cartArray])
+  
   function scrollHandler() {
     setY(window.scrollY);
   }
@@ -23,7 +35,12 @@ function Header() {
   return (
     <>
       <section className={y > 0 ? "header header-scroll" : "header"}>
+        
         {showVerticalNav && (
+          <>
+          <div className="close-vertical" onClick={()=>{
+            setshowVerticalNav(false)
+          }}></div>
           <div className="vertical-nav-container">
             <ul className="main-nav-phone">
               <li>
@@ -111,7 +128,8 @@ function Header() {
                 <a href="#shalat">Shalat</a>
               </li>
             </ul>
-          </div>
+          </div></>
+         
         )}
         <div
           className={
@@ -247,7 +265,7 @@ function Header() {
                   <a>
                     <BsFillHeartFill className="header-icons fav" />
 
-                    <strong className="number">5</strong>
+                    <strong className="number">{favNam}</strong>
                   </a>
                 </Link>
               </li>
@@ -265,7 +283,7 @@ function Header() {
                   <a>
                     <BsCartFill className="header-icons cart" />
 
-                    <strong className="number">5</strong>
+                    <strong className="number">{cartNam}</strong>
                   </a>
                 </Link>
               </li>

@@ -91,7 +91,6 @@
     position: relative;
     z-index: 3;
     overflow: hidden;
-    visibility: hidden;
   }
   .profile-info-section .lamar-container .submit::before{
       content: "";
@@ -115,8 +114,4 @@ left: 0;
       font-size: 22px;
       font-weight: 600;
       transform: translateY(-3px);
-  }
-
-  .profile-info-section .lamar-container .submit.show-submit{
-      visibility: visible;
   }
