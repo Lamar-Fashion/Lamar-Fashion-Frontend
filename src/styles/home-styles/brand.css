@@ -3,7 +3,7 @@
   padding-bottom: var(--main-padding-bottom);
   padding-top: var(--main-padding-top);
   position: relative;
-  border-top: black dashed 5px;
+  /* border-top: black dashed 5px; */
 }
 .brand .custom-shape-divider-top-1638712956 {
   position: absolute;
